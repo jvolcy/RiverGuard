@@ -3,3 +3,8 @@ Tilesets: https://opengameart.org/content/worldmapoverworld-tileset
 Fighter Jet: https://github.com/topics/space-fighter
 
 Explosion: https://www.seekpng.com/ima/u2e6r5y3r5y3w7y3/
+
+Road: https://freesvg.org/parking-street-view-from-top-vector-illustration
+
+Tree: http://clipart-library.com/clipart/1230254.htm
+

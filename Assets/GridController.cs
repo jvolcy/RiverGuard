@@ -5,6 +5,8 @@ using UnityEngine;
 public class GridController : MonoBehaviour
 {
     public float HSpeed = 5f;
+    public float MinHorzPosition = -9f;
+    public float MaxHorzPosition = 9f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,6 @@ public class GridController : MonoBehaviour
         float XInput = Input.GetAxis("Horizontal");
         //transform.Translate(-HSpeedMultiplier * VSpeed * Time.deltaTime * XInput, -VSpeed * Time.deltaTime, 0f);
         transform.Translate(-HSpeed * XInput * Time.deltaTime, 0f, 0f);
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -8f, 8f), transform.position.y, 0f);
-
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, MinHorzPosition, MaxHorzPosition), transform.position.y, 0f);
     }
 }
