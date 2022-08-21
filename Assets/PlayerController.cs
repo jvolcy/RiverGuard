@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float MaxBankAngle = 45f;
+    public GameObject MissilePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -19,5 +20,10 @@ public class PlayerController : MonoBehaviour
         //transform.Translate(Speed * Time.deltaTime * Input.GetAxis("Horizontal"), Speed * Time.deltaTime * Input.GetAxis("Vertical"), 0f);
         transform.rotation = Quaternion.Euler(0, MaxBankAngle * XInput, 0);
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject missile = Instantiate(MissilePrefab);
+            missile.transform.position = transform.position;
+        }
     }
 }
