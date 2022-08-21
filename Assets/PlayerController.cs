@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject missile = Instantiate(MissilePrefab, Overworld, true);
+
+            //set the bullet slightly ahead of the player so that it doesn't collide with the player
             missile.transform.position = transform.position + 0.5f * Vector3.up;
         }
     }

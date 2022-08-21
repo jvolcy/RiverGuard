@@ -2050,7 +2050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb887eb8391714f3da3e8d1f0de54305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VSpeed: 2
+  VSpeed: 0
   Acceleration: 1
   WrapAt: -150
   WrapAmt: 200
@@ -2792,7 +2792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb887eb8391714f3da3e8d1f0de54305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VSpeed: 2
+  VSpeed: 0
   Acceleration: 1
   WrapAt: -150
   WrapAmt: 200
@@ -16207,7 +16207,7 @@ GameObject:
   - component: {fileID: 1694061501}
   m_Layer: 0
   m_Name: jet
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
