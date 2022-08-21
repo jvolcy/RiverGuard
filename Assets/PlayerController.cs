@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float MaxBankAngle = 45f;
     public GameObject MissilePrefab;
+    public Transform Overworld;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject missile = Instantiate(MissilePrefab);
-            missile.transform.position = transform.position;
+            GameObject missile = Instantiate(MissilePrefab, Overworld, true);
+            missile.transform.position = transform.position + 0.5f * Vector3.up;
         }
     }
 }

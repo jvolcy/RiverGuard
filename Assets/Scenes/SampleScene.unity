@@ -2050,7 +2050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb887eb8391714f3da3e8d1f0de54305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HSpeedMultiplier: 0.75
   VSpeed: 2
   Acceleration: 1
   WrapAt: -150
@@ -2793,7 +2792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb887eb8391714f3da3e8d1f0de54305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HSpeedMultiplier: 0.75
   VSpeed: 2
   Acceleration: 1
   WrapAt: -150
@@ -7640,6 +7638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ea2fa5584f04f02976a4b474d3e9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HSpeed: 5
 --- !u!1 &1291809654
 GameObject:
   m_ObjectHideFlags: 0
@@ -16243,6 +16242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxBankAngle: 45
   MissilePrefab: {fileID: 283728565708104453, guid: 44a035d9ba02d4661aa6cd3b99d08bfd, type: 3}
+  Overworld: {fileID: 1280280009}
 --- !u!212 &1694061499
 SpriteRenderer:
   m_ObjectHideFlags: 0

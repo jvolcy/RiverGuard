@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RiverScroller : MonoBehaviour
 {
-    public float HSpeedMultiplier = 0.75f;
+    //public float HSpeedMultiplier = 0.75f;
     public float VSpeed = 1f;
     public float Acceleration = 1f;
     public float WrapAt = -150f;
@@ -21,9 +21,10 @@ public class RiverScroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float XInput = Input.GetAxis("Horizontal");
+        //float XInput = Input.GetAxis("Horizontal");
         VSpeed += Acceleration * Time.deltaTime * Input.GetAxis("Vertical");
-        transform.Translate(-HSpeedMultiplier * VSpeed * Time.deltaTime * XInput, -VSpeed * Time.deltaTime, 0f);
+        //transform.Translate(-HSpeedMultiplier * VSpeed * Time.deltaTime * XInput, -VSpeed * Time.deltaTime, 0f);
+        transform.Translate(0f, -VSpeed * Time.deltaTime, 0f);
 
         if (transform.position.y < WrapAt)
         {
@@ -31,7 +32,6 @@ public class RiverScroller : MonoBehaviour
             RandomSelectRiverScroller();
         }
 
-        transform.position = new Vector3 (Mathf.Clamp(transform.position.x, -8f, 8f), transform.position.y, 0f);
     }
 
     void DisableScrollers()
