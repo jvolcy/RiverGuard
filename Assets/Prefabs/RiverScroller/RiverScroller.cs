@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class RiverScroller : MonoBehaviour
 {
-    //public float HSpeedMultiplier = 0.75f;
-    public float VSpeed = 1f;
-    public float Acceleration = 1f;
+    GameManager gameManager;
     public float WrapAt = -150f;
     public float WrapAmt = 500f;
 
@@ -15,16 +13,15 @@ public class RiverScroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+
         RandomSelectRiverScroller();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //float XInput = Input.GetAxis("Horizontal");
-        VSpeed += Acceleration * Time.deltaTime * Input.GetAxis("Vertical");
-        //transform.Translate(-HSpeedMultiplier * VSpeed * Time.deltaTime * XInput, -VSpeed * Time.deltaTime, 0f);
-        transform.Translate(0f, -VSpeed * Time.deltaTime, 0f);
+        transform.Translate(0f, -gameManager.PlayerVSpeed * Time.deltaTime, 0f);
 
         if (transform.position.y < WrapAt)
         {
